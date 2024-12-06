@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e8425e2b4aaef4cb3baa619a4188a7, type: 3}
+  m_Name: StrawBerry Data
+  m_EditorClassIdentifier: 
+  data:
+    favoriteSeason: 0
+    rewardData:
+      harvests: 0
+      expBonus: 0
+      sellPrice: 0
+    stageDatas:
+    - stageImage: {fileID: 6625436996197027576, guid: a90df79ebeca3f0429a61e86287b041c, type: 3}
+      transitionTime: 5
+      isFinalStage: 0
+    - stageImage: {fileID: 8085327282089476617, guid: be7fa65f3cdae4c4c8d6f02634fa7950, type: 3}
+      transitionTime: 5
+      isFinalStage: 0
+    - stageImage: {fileID: 514314024821487487, guid: c9386495a168b4e479212ba46e0a621c, type: 3}
+      transitionTime: 5
+      isFinalStage: 0
+    - stageImage: {fileID: -9162822984531271059, guid: 69dbb4717cfcc9146afa77084e368a91, type: 3}
+      transitionTime: 5
+      isFinalStage: 0
+    - stageImage: {fileID: 8015837405719694607, guid: 796240e6d3652f448874d5266bd3112c, type: 3}
+      transitionTime: 5
+      isFinalStage: 0
+    - stageImage: {fileID: 530007551302506754, guid: 293f06c3b1398d94cab26afe0d115423, type: 3}
+      transitionTime: 5
+      isFinalStage: 0
+    - stageImage: {fileID: 8015837405719694607, guid: 796240e6d3652f448874d5266bd3112c, type: 3}
+      transitionTime: 0
+      isFinalStage: 1
