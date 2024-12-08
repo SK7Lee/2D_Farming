@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-namespace TreeManager {
+namespace FarmSystem
+{
     
-    public class TreeComponent : MonoBehaviour
+    public class Tree : MonoBehaviour
     {
         [Header("Components")]
         public SpriteRenderer spriteRenderer;

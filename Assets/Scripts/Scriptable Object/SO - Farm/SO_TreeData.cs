@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TreeManager
+namespace FarmSystem
 {
     [System.Serializable]
     public enum ESeason

@@ -1,70 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections.Generic;
 using System.Collections;
 
-
-public class PlayerController : MonoBehaviour
+public class CharacterPlayer : Character
 {
-    [Header("Components")]
-    public Animator animator;
-    public AnimatorOverrideController runTimeAnimatorController;
-    public CharacterController controller;
-    public SpriteRenderer spriteRenderer;
 
-    [Header("Movement OnGround")]
-    [Tooltip("Idle - Walk - Run props")]
-    public bool isSprint;
-    public bool isFlip = false;
-    public float speed = 0.0f;
-    public float walkSpeed = 2.0f;
-    public float runSpeed = 6.0f;
-    public Vector2 moveDirection = Vector2.zero;
-    public Vector2 lastMoveDirection = Vector2.zero;
-    [Tooltip("Jump")]
-    public float jumpDuration = .5f;
-    public float jumpHeight = 5.0f;
-    [Tooltip("Roll")]
-    public float rollDuration = .5f;
-    public float rollDistance = 5.0f;
-
-    [Header("Movement OnWater")]
-    public bool isGround = true;
-    public LayerMask waterLayerMask;
-    public float groundCheckRadius = 1.0f;
-    public float groundCheckDistance = 1.0f;
-
-    public float swimSpeed = 3.0f;
-    public float fastSwimSpeed = 5.0f;
-
-    [Header("Movement Variations")]
-    public AnimationCurve jumpCurve;
-    public AnimationCurve rollCurve;
-
+    PlayerControls playerControls;
     //Coroutines
     Coroutine C_Jump;
     Coroutine C_Roll;
-    //Input System
-    PlayerControls playerControls;
-
-    private void Awake()
+    protected override void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
-        controller = GetComponent<CharacterController>();
+        base.Awake();
         playerControls = new PlayerControls();
         InputBinding();
     }
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         animator.runtimeAnimatorController = runTimeAnimatorController;
         speed = walkSpeed;
     }
-
+    private void Update()
+    {
+        CheckGround();
+    }
     private void FixedUpdate()
     {
         Move();
-        CheckGround();
     }
     #region InputManager
     private void InputBinding()
@@ -161,11 +124,11 @@ public class PlayerController : MonoBehaviour
     //Hàm này lật Sprite nhân vật khi hướng di chuyển moveDirection.x thay đổi
     public void Flip()
     {
-        if(moveDirection.x > 0)
+        if (moveDirection.x > 0)
         {
             spriteRenderer.flipX = false;
         }
-        else if(moveDirection.x < 0)
+        else if (moveDirection.x < 0)
         {
             spriteRenderer.flipX = true;
         }
@@ -173,7 +136,7 @@ public class PlayerController : MonoBehaviour
     //Hàm nhảy
     public void StartJump()
     {
-        if(C_Jump == null && isGround)
+        if (C_Jump == null && isGround)
             C_Jump = StartCoroutine(Jump());
     }
     IEnumerator Jump()
@@ -201,8 +164,8 @@ public class PlayerController : MonoBehaviour
     //Hàm lăn nhân vật
     public void StartRoll()
     {
-        if(C_Roll == null && C_Jump == null && isGround) 
-        C_Roll = StartCoroutine(Roll());
+        if (C_Roll == null && C_Jump == null && isGround)
+            C_Roll = StartCoroutine(Roll());
     }
     IEnumerator Roll()
     {
@@ -221,36 +184,10 @@ public class PlayerController : MonoBehaviour
         C_Roll = null;
     }
     #endregion
-    
-    void CheckGround()
-    {
-        // Thực hiện CircleCast
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, groundCheckRadius, Vector2.down, groundCheckDistance, waterLayerMask);
-
-        if (hit.collider != null)
-        {
-            isGround = false;
-            if (animator.GetBool(AnimationParams.IsGround_Param))
-            {
-                Debug.Log("Set To False");
-                animator.SetBool(AnimationParams.IsGround_Param, isGround);
-            }
-        }
-        else
-        {
-            isGround = true;
-            if (!animator.GetBool(AnimationParams.IsGround_Param))
-            {
-                Debug.Log("Set To True");
-                animator.SetBool(AnimationParams.IsGround_Param, isGround);
-            }
-        }
-    }
     private void OnDrawGizmos()
     {
         // Vẽ Gizmos để dễ dàng kiểm tra hình tròn trong Scene
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 1.0f);
     }
-
 }
