@@ -1,7 +1,7 @@
-using UnityEngine;
+//using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_CombatData", menuName = "Scriptable Objects/SO_CombatData")]
-public class SO_CombatData : ScriptableObject
-{
+//[CreateAssetMenu(fileName = "SO_CombatData", menuName = "FarmSystem/Data/Combat Data")]
+//public class SO_CombatData : ScriptableObject
+//{
     
-}
+//}

@@ -1,16 +1,15 @@
+using FarmSystem;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+[CreateAssetMenu(fileName = "Behavior Data", menuName = "Farm System/Behavior/Attack Action")]
+public class Attack : CombatAction
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void Execute(CharacterAI agent)
     {
-        
+        base.Execute(agent);
     }
-
-    // Update is called once per frame
-    void Update()
+    public override bool IsFinish(CharacterAI agent)
     {
-        
+        return base.IsFinish(agent);
     }
 }

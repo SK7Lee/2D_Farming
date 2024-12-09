@@ -1,16 +1,11 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class Action : MonoBehaviour
+namespace FarmSystem
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class Action : SO_Behavior
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Execute(CharacterAI agent) { }
+        public override bool IsFinish(CharacterAI agent) { return false; }
     }
 }

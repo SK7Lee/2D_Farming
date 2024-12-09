@@ -1,16 +1,16 @@
+using FarmSystem;
 using UnityEngine;
 
-public class Jump : MonoBehaviour
+[CreateAssetMenu(fileName = "Behavior Data", menuName = "Farm System/Behavior/Jump Action")]
+public class Jump : Action
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void Execute(CharacterAI agent)
     {
-        
+        base.Execute(agent);
+    }
+    public override bool IsFinish(CharacterAI agent)
+    {
+        return base.IsFinish(agent);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -1,29 +1,22 @@
 using UnityEngine;
-
-public class CharacterEnemy : CharacterAI
+namespace FarmSystem
 {
-    //Testing
-    public Transform target;
-    public float timeDelay = 1.0f;
-    public float timeUpdated = 0.0f;
-    protected override void Awake()
+    public class CharacterEnemy : CharacterAI
     {
-        base.Awake();
-    }
-    protected override void Start()
-    {
-        base.Start();
-    }
-
-    //Testing
-    private void Update()
-    {
-        //Testing
-        if(Time.time > timeUpdated + timeDelay) {
-            agent.SetDestination(target.position);
-            timeUpdated = Time.time;
+        protected override void Awake()
+        {
+            base.Awake();
         }
-
-        CheckGround();
+        protected override void Start()
+        {
+            base.Start();
+        }
+        private void Update()
+        {
+            CheckGround();
+        }
+        private void FixedUpdate()
+        {
+        }
     }
 }

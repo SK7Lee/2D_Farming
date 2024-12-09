@@ -1,16 +1,16 @@
+using FarmSystem;
 using UnityEngine;
 
-public class Roll : MonoBehaviour
+[CreateAssetMenu(fileName = "Behavior Data", menuName = "Farm System/Behavior/Roll Action")]
+public class Roll : NormalAction
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void Execute(CharacterAI agent)
     {
-        
+        base.Execute(agent);
     }
-
-    // Update is called once per frame
-    void Update()
+    public override bool IsFinish(CharacterAI agent)
     {
-        
+        return base.IsFinish(agent);
     }
 }
+

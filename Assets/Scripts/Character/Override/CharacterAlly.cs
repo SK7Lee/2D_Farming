@@ -1,14 +1,23 @@
 using UnityEngine;
-
-public class CharacterAlly : CharacterAI
+namespace FarmSystem
 {
-    protected override void Awake()
+    public class CharacterAlly : CharacterAI
     {
-        base.Awake();
+        protected override void Awake()
+        {
+            base.Awake();
+        }
+        protected override void Start()
+        {
+            base.Start();
+        }
+        private void Update()
+        {
+            CheckGround();
+        }
+        private void FixedUpdate()
+        {
+            
+        }
     }
-    protected override void Start()
-    {
-        base.Start();
-    }
-
 }

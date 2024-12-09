@@ -43,7 +43,7 @@ namespace FarmSystem
         [Header("Trạng thái của cây: ")]
         public List<StageData> stageDatas;
     }
-    [CreateAssetMenu(fileName = "SO_TreeData", menuName = "Scriptable Objects/SO_TreeData")]
+    [CreateAssetMenu(fileName = "Tree Data", menuName = "Farm System/Data/Tree Data")]
     public class SO_TreeData : ScriptableObject
     {
         public TreeData data;
