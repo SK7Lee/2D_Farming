@@ -126,7 +126,11 @@ TextureImporter:
         width: 49
         height: 95
       alignment: 0
+<<<<<<< HEAD
       pivot: {x: 0.5, y: 0.5}
+=======
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -148,7 +152,11 @@ TextureImporter:
         width: 37
         height: 61
       alignment: 0
+<<<<<<< HEAD
       pivot: {x: 0.5, y: 0.5}
+=======
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +178,11 @@ TextureImporter:
         width: 37
         height: 61
       alignment: 0
+<<<<<<< HEAD
       pivot: {x: 0.5, y: 0.5}
+=======
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,12 +199,21 @@ TextureImporter:
       name: farm objects free_3
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 6
         y: 2
         width: 91
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 7
+        y: 2
+        width: 90
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +235,11 @@ TextureImporter:
         width: 27
         height: 14
       alignment: 0
+<<<<<<< HEAD
       pivot: {x: 0.5, y: 0.5}
+=======
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,7 +261,11 @@ TextureImporter:
         width: 23
         height: 29
       alignment: 0
+<<<<<<< HEAD
       pivot: {x: 0.5, y: 0.5}
+=======
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,7 +287,11 @@ TextureImporter:
         width: 23
         height: 30
       alignment: 0
+<<<<<<< HEAD
       pivot: {x: 0.5, y: 0.5}
+=======
+      pivot: {x: 0, y: 0}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,7 +308,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< HEAD
     spriteID: 8518e84d98e440f45b115295ac63a760
+=======
+    spriteID: 
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
     internalID: 0
     vertices: []
     indices: 
@@ -284,6 +321,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable:
       farm objects free_0: -16323402103616106
       farm objects free_1: -4464110299448769046
@@ -292,6 +330,9 @@ TextureImporter:
       farm objects free_4: 3757897772134302402
       farm objects free_5: -9014638448460590477
       farm objects free_6: 351438596505185528
+=======
+    nameFileIdTable: {}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

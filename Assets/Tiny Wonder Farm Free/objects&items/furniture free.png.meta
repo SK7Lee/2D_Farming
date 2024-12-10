@@ -259,6 +259,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable:
       furniture free_0: 5724885910011694229
       furniture free_1: 1678429356292302637
@@ -266,6 +267,9 @@ TextureImporter:
       furniture free_3: 8392497466107093028
       furniture free_4: 6625881941199260924
       furniture free_5: 1988068842756057390
+=======
+    nameFileIdTable: {}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

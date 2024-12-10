@@ -434,6 +434,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable:
       items free_0: -9058764611767818815
       items free_1: 8690761093512919785
@@ -448,6 +449,9 @@ TextureImporter:
       items free_7: 8186034762313153138
       items free_8: -3321852513641714208
       items free_9: -3184107994885942474
+=======
+    nameFileIdTable: {}
+>>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
