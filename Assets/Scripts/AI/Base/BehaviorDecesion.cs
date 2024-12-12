@@ -48,6 +48,8 @@ namespace FarmSystem
         public SFarmingActionData currentFarmingActionData;
         public SNormalActionData currentNormalActionData;
 
+        public Action currentAction;
+
         [Header("Actions")]
         public List<SNormalActionData> normalActionDatas;
         public List<SCombatActionData> combatActionDatas;
@@ -107,7 +109,6 @@ namespace FarmSystem
             while (ownerAI.energy > 0)
             {
                 yield return new WaitWhile(() => currentBehaviorState == EBehaviorState.Executing);
-                Debug.Log("Execute Behav");
                 EvaluateAndExecuteBehavior();
                 yield return new WaitWhile(() => currentBehaviorState == EBehaviorState.Executing);
             }
@@ -187,7 +188,9 @@ namespace FarmSystem
 
                 currentCombatActionData = actionOutput;
 
-                StartCoroutine(StartCooldown(currentCombatActionData.action));
+                currentAction = currentCombatActionData.action;
+
+                //StartCoroutine(StartCooldown(currentCombatActionData.action));
 
                 currentCombatActionData.action.Execute(ownerAI);
                 return;
@@ -216,7 +219,9 @@ namespace FarmSystem
 
                 currentFarmingActionData = actionOutput;
 
-                StartCoroutine(StartCooldown(currentFarmingActionData.action));
+                currentAction = currentCombatActionData.action;
+
+                //StartCoroutine(StartCooldown(currentFarmingActionData.action));
 
                 currentFarmingActionData.action.Execute(ownerAI);
                 return;
@@ -244,7 +249,9 @@ namespace FarmSystem
 
                     currentNormalActionData = actionOutput;
 
-                    StartCoroutine(StartCooldown(currentNormalActionData.action));
+                    currentAction = currentCombatActionData.action;
+
+                    //StartCoroutine(StartCooldown(currentNormalActionData.action));
 
                     currentNormalActionData.action.Execute(ownerAI);
                     return;
@@ -378,14 +385,103 @@ namespace FarmSystem
         {
             switch (type)
             {
+                case EBoolType.Step1_HasTarget:
+                    {
+                        return ownerAI.targetingComponent.target;
+                    }
+                case EBoolType.Step2_TargetIsSoil:
+                    {
+                        if (ownerAI.targetingComponent.target.GetComponent<Soil>() != null)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                case EBoolType.Step2_TargetIsStorage:
+                    {
+                        if (ownerAI.targetingComponent.target.GetComponent<Storage>() != null)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                case EBoolType.Step3_SoilNoPlant:
+                    {
+                        if (ownerAI.targetingComponent.target.GetComponent<Soil>() != null)
+                        {
+                            Soil soil = ownerAI.targetingComponent.target.GetComponent<Soil>();
+                            if((soil.soilState & ESoilState.HasPlant) == 0)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                case EBoolType.Step3_SoilHasPlant:
+                    {
+                        if (ownerAI.targetingComponent.target.GetComponent<Soil>() != null)
+                        {
+                            Soil soil = ownerAI.targetingComponent.target.GetComponent<Soil>();
+                            if ((soil.soilState & ESoilState.HasPlant) != 0)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                case EBoolType.Step4_PlantCanHarvest:
+                    {
+                        if (ownerAI.targetingComponent.target.GetComponent<Soil>() != null)
+                        {
+                            Soil soil = ownerAI.targetingComponent.target.GetComponent<Soil>();
+                            if ((soil.soilState & ESoilState.HasPlant) != 0)
+                            {
+                                if (soil.currentTree.treeCurrentStage.isFinalStage) return true;
+                                else return false;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
                 case EBoolType.Ground:
                     {
                         return ownerAI.isGround;
+                    }
+                case EBoolType.Carrying:
+                    {
+                        return ownerAI.isCarrying;
                     }
                 case EBoolType.Jumpable:
                     {
                         return ownerAI.isGround;
                     }
+
 
                 default:
                     return false;
@@ -405,8 +501,7 @@ namespace FarmSystem
             {
                 case EFloatType.Distance:
                     {
-
-                        return 0.0f;
+                        return Vector2.Distance(ownerAI.targetingComponent.target.transform.position, gameObject.transform.position);
                     }
                 //case EFloatType.HP:
                 //    {

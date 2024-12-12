@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +10,12 @@ namespace FarmSystem {
         Walk,
         Run
     }
+    public enum EFlipType
+    {
+        None = 0,
+        AgentVelocity,
+        ActionExecute
+    }
     public class CharacterAI : Character
     {
         public BehaviorDecesion behaviorDecesion;
@@ -20,18 +26,52 @@ namespace FarmSystem {
         protected Coroutine C_Attack;
         protected Coroutine C_Roll;
         protected Coroutine C_Jump;
+
+        [Header("Current Target Tree")]
+        public string treeTargetName;
         protected override void Awake()
         {
             base.Awake();
             behaviorDecesion = GetComponent<BehaviorDecesion>();
         }
-
         protected override void Start()
         {
             base.Start();
             agent = GetComponent<NavMeshAgent>();
             agent.updateRotation = false;
             agent.updateUpAxis = false;
+
+        }
+        public void Flip(EFlipType flipType)
+        {
+            switch (flipType)
+            {
+                case EFlipType.AgentVelocity:
+                    Vector3 moveDirection = agent.velocity.normalized;
+                    if (moveDirection.x > 0)
+                    {
+                        spriteRenderer.flipX = false;
+                    }
+                    else if (moveDirection.x < 0)
+                    {
+                        spriteRenderer.flipX = true;
+                    }
+                    break;
+                case EFlipType.ActionExecute:
+                    Vector2 targetPosition = targetingComponent.target.transform.position;
+                    if(targetPosition.x > gameObject.transform.position.x)
+                    {
+                        spriteRenderer.flipX = false;
+                    }
+                    else if(targetPosition.x < gameObject.transform.position.x)
+                    {
+                        spriteRenderer.flipX = true;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
         }
         #region FuncCallOutSide
         public void StartJump()
@@ -115,21 +155,51 @@ namespace FarmSystem {
                     speed = 5.0f;
                     break;
             }
+
+            //Start Move
+            animator.CrossFadeInFixedTime(AnimationParams.Locomotion_State, .1f);
+            animator.SetFloat(AnimationParams.Speed_Param, animBlendFactor);
+            //Disable avoid Agent
+            //agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
             //Start Move
             agent.SetDestination(targetPosition);
             agent.speed = speed;
-            animator.CrossFadeInFixedTime(AnimationParams.Speed_Param, animBlendFactor);
             behaviorDecesion.currentBehaviorState = EBehaviorState.Executing;
-            while(Vector2.Distance(agent.transform.position, targetPosition) > agent.stoppingDistance)
+            while (!HasReachedDestination())
             {
-                Debug.Log("Executing Move");
+                if (targetingComponent.isCurrentSoilTargetInProcess()) break;
+                Debug.Log("Executing Move " + gameObject.name);
+                Flip(EFlipType.AgentVelocity);
                 yield return null;
             }
-            //End Move
+            //agent.obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
             behaviorDecesion.currentBehaviorState = EBehaviorState.Finish;
             speed = 0.0f;
-            animator.CrossFadeInFixedTime(AnimationParams.Speed_Param, 0.0f);
+            animator.SetFloat(AnimationParams.Speed_Param, 0.0f);
         }
-        #endregion
+
+        bool HasReachedDestination()
+        {
+            // Kiểm tra nếu agent hoặc đích không hợp lệ
+            if (agent == null || targetingComponent.target == null)
+            {
+                return false;
+            }
+
+            // Kiểm tra nếu agent đã dừng cách mục tiêu trong khoảng stoppingDistance
+            if (!agent.pathPending) // Đảm bảo agent đã tính xong đường đi
+            {
+                if (agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f) // Kiểm tra nếu agent đã dừng
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
+    #endregion
 }
+

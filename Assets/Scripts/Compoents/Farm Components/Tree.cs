@@ -4,7 +4,7 @@ using UnityEngine;
 namespace FarmSystem
 {
     
-    public class Tree : MonoBehaviour
+    public class Tree : ResourceBase
     {
         [Header("Components")]
         public SpriteRenderer spriteRenderer;
@@ -16,7 +16,7 @@ namespace FarmSystem
         [Header("Stage Manager")]
         [Header("Tree Current Stage")]
         public int currentStageIndex = 0;
-        public StageData treeCurrentStage;
+        public TreeStageData treeCurrentStage;
 
         Coroutine C_Growing;
         private void Awake()
@@ -36,6 +36,11 @@ namespace FarmSystem
                 currentStageIndex++;
                 treeCurrentStage = treeDataTemporary.data.stageDatas[currentStageIndex];
                 spriteRenderer.sprite = treeCurrentStage.stageImage;
+
+                if(treeCurrentStage.isFinalStage)
+                {
+                    transform.GetComponentInParent<Soil>().SetState(ESoilState.CanHarvest);
+                }
             }
         }
 

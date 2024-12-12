@@ -13,7 +13,7 @@ namespace FarmSystem
         Winter
     }
     [System.Serializable]
-    public struct StageData
+    public struct TreeStageData
     {
         [Header("Mô tả hình ảnh của cây ở trạng thái này")]
         public Sprite stageImage;
@@ -34,6 +34,19 @@ namespace FarmSystem
         public float sellPrice;
     }
     [System.Serializable]
+    public struct TreeOffsets
+    {
+        [Header("Biến dạng trạng thái khi trồng")]
+        public Vector2 plantingPositionOffset;
+        public Vector2 plantingRotationOffset;
+        public Vector2 plantingScaleOffset;
+
+        [Header("Biến dạng trạng thái khi thu hoạch")]
+        public Vector2 havestingPositionOffset;
+        public Vector2 havestingRotationOffset;
+        public Vector2 havestingScaleOffset;
+    }
+    [System.Serializable]
     public struct TreeData
     {
         [Header("Mùa ưa thích")]
@@ -41,8 +54,13 @@ namespace FarmSystem
         [Header("Giá trị nhận được sau khi thu hoạch")]
         public RewardData rewardData;
         [Header("Trạng thái của cây: ")]
-        public List<StageData> stageDatas;
+        public List<TreeStageData> stageDatas;
+        [Header("Prefab tham chiếu: ")]
+        public GameObject objectReference;
+        [Header("Tree Offsets")]
+        public TreeOffsets offsets;
     }
+
     [CreateAssetMenu(fileName = "Tree Data", menuName = "Farm System/Data/Tree Data")]
     public class SO_TreeData : ScriptableObject
     {

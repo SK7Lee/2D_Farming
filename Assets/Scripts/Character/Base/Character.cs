@@ -30,6 +30,7 @@ namespace FarmSystem
 
         [Header("Movement OnWater")]
         public bool isGround = true;
+        public bool isCarrying = false;
         public LayerMask waterLayerMask;
         public float groundCheckRadius = 1.0f;
         public float groundCheckDistance = 1.0f;
@@ -59,18 +60,7 @@ namespace FarmSystem
         {
 
         }
-        //Hàm này lật Sprite nhân vật khi hướng di chuyển moveDirection.x thay đổi
-        public void Flip()
-        {
-            if (moveDirection.x > 0)
-            {
-                spriteRenderer.flipX = false;
-            }
-            else if (moveDirection.x < 0)
-            {
-                spriteRenderer.flipX = true;
-            }
-        }
+
         public void CheckGround()
         {
             // Thực hiện CircleCast

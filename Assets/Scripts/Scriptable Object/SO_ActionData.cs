@@ -13,7 +13,7 @@ namespace FarmSystem
         Rod,
         Sword,
         Hammer,
-        Plant
+        ByHand
     }
     [System.Serializable]
     public struct ActionData

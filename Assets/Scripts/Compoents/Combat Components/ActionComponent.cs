@@ -62,10 +62,16 @@ namespace FarmSystem
         }
         public void PlayActionAI(SO_ActionData action)
         {
-
+            currentAction = action;
+            owner.currentToolType = action.data.toolRequired;
+            StartExecuteAction();
         }
         public void ExecuteAnimationByTool(EToolType toolType)
         {
+            if(owner as CharacterAI)
+            {
+                (owner as CharacterAI).Flip(EFlipType.ActionExecute);
+            }
             switch (toolType)
             {
                 case EToolType.Pickaxe:
@@ -80,7 +86,7 @@ namespace FarmSystem
                 case EToolType.Shovel:
                     owner.animator.CrossFadeInFixedTime(AnimationParams.Dig_State, .1f);
                     break;
-                case EToolType.Plant:
+                case EToolType.ByHand:
                     owner.animator.CrossFadeInFixedTime(AnimationParams.Doing_State, .1f);
                     break;
                 case EToolType.Hammer:
@@ -98,21 +104,38 @@ namespace FarmSystem
         {
             yield return new WaitWhile(() => currentActionState == EActionState.Executing);
 
-            while(actionExecuteTimes < currentAction.data.playAnimTimes)
+            if (owner as CharacterAI)
             {
+                Soil soil = (owner as CharacterAI).targetingComponent.target.GetComponent<Soil>();
+                if (soil != null)
+                (owner as CharacterAI).targetingComponent.target.GetComponent<Soil>().SetState(ESoilState.InProcess);
+            }
+            while (actionExecuteTimes < currentAction.data.playAnimTimes)
+            {
+                yield return new WaitWhile(() => currentActionState == EActionState.Executing);
                 ExecuteAnimationByTool(owner.currentToolType);
                 actionExecuteTimes++;
                 yield return new WaitWhile(() => currentActionState == EActionState.Executing);
             }
+            if (owner as CharacterAI)
+            {
+                Soil soil = (owner as CharacterAI).targetingComponent.target.GetComponent<Soil>();
+                if (soil != null)
+                    (owner as CharacterAI).targetingComponent.target.GetComponent<Soil>().RemoveState(ESoilState.InProcess);
+            }
+            yield return new WaitWhile(() => currentActionState == EActionState.Executing);
+
             ResetAction();
         }
-
         public void ResetAction()
         {
             actionExecuteTimes = 0;
            if(owner as CharacterAI)
             {
-                (owner as CharacterAI).behaviorDecesion.currentBehaviorState = EBehaviorState.Finish;
+                CharacterAI ownerAI = owner as CharacterAI;
+                ownerAI.behaviorDecesion.currentBehaviorState = EBehaviorState.Finish;
+                    (ownerAI.behaviorDecesion.currentFarmingActionData.action as Farming).Benefit(ownerAI);
+
             }
         }
 

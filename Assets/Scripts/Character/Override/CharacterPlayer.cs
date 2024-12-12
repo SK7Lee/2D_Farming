@@ -94,6 +94,18 @@ namespace FarmSystem
         }
         #endregion
         #region MovementManager
+        //Hàm này lật Sprite nhân vật khi hướng di chuyển moveDirection.x thay đổi
+        public void Flip()
+        {
+            if (moveDirection.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (moveDirection.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
         //Hàm di chuyển nhân vật
         public void Move()
         {

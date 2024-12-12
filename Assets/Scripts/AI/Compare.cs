@@ -10,8 +10,17 @@ namespace FarmSystem
         None = 0,
 
         Ground,
-        HasTarget,
-        Attackable,
+        Carrying,
+
+        Step1_HasTarget,
+        Step2_TargetIsSoil,
+        Step2_TargetIsStorage,
+
+        Step3_SoilNoPlant,
+        Step3_SoilHasPlant,
+
+        Step4_PlantCanHarvest,
+        
         Jumpable
 
     }

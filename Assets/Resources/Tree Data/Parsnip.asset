@@ -34,3 +34,11 @@ MonoBehaviour:
     - stageImage: {fileID: -5858252376926982136, guid: ec25a056c50d9fe45aa02406c2771dbe, type: 3}
       transitionTime: 5
       isFinalStage: 1
+    objectReference: {fileID: 3272815052876045799, guid: 0f635dc54ef6775429c53c57249a60ef, type: 3}
+    offsets:
+      plantingPositionOffset: {x: 0, y: 0.02}
+      plantingRotationOffset: {x: 0, y: 0}
+      plantingScaleOffset: {x: 0.25, y: 0.25}
+      havestingPositionOffset: {x: 0, y: 0.15}
+      havestingRotationOffset: {x: 0, y: 0}
+      havestingScaleOffset: {x: 0.4, y: 0.4}

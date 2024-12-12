@@ -10,6 +10,9 @@ public static class AnimationParams
     public static readonly int Roll_State = Animator.StringToHash("Roll");
     public static readonly int Swimming_State = Animator.StringToHash("Swimming");
     public static readonly int Locomotion_State = Animator.StringToHash("Locomotion");
+    public static readonly int Idle_State = Animator.StringToHash("Idle");
+    public static readonly int Walk_State = Animator.StringToHash("Walk");
+    public static readonly int Run_State = Animator.StringToHash("Run");
 
                                     //+ Crafting States
     public static readonly int Dig_State = Animator.StringToHash("Dig");
@@ -32,4 +35,5 @@ public static class AnimationParams
                                     //+ Movement Params
     public static readonly int Speed_Param = Animator.StringToHash("Speed");
     public static readonly int IsGround_Param = Animator.StringToHash("isGround");
+    public static readonly int IsCarrying_Param = Animator.StringToHash("isCarrying");
 }

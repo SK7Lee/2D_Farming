@@ -9,7 +9,9 @@ namespace FarmSystem
         }
         protected override void Start()
         {
+            animator.runtimeAnimatorController = runTimeAnimatorController;
             base.Start();
+
         }
         private void Update()
         {
