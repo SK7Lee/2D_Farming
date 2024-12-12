@@ -11,11 +11,7 @@ GameObject:
   - component: {fileID: 1449884944997565756}
   - component: {fileID: 10987350984403062}
   - component: {fileID: 7833137106024968637}
-<<<<<<< HEAD
   m_Layer: 0
-=======
-  m_Layer: 7
->>>>>>> master
   m_Name: Parsnip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,15 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-<<<<<<< HEAD
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-=======
-  m_SortingLayerID: -1352191939
-  m_SortingLayer: 3
-  m_SortingOrder: 2
->>>>>>> master
   m_Sprite: {fileID: 1632081351081823852, guid: 040475a9ed4e4294cb325a3a33e29809, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

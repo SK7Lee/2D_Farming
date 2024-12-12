@@ -2,14 +2,8 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-<<<<<<< HEAD
   serializedVersion: 2
   tags: []
-=======
-  serializedVersion: 3
-  tags:
-  - Land
->>>>>>> master
   layers:
   - Default
   - TransparentFX
@@ -17,13 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-<<<<<<< HEAD
   - 
   - 
-=======
-  - Player
-  - Tree
->>>>>>> master
   - 
   - 
   - 
@@ -52,17 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-=======
-  - name: Water
-    uniqueID: 310212753
-    locked: 0
-  - name: Player
-    uniqueID: 1219740171
-    locked: 0
-  - name: Tree
-    uniqueID: 2942775357
-    locked: 0
-  m_RenderingLayers:
-  - Default
->>>>>>> master
