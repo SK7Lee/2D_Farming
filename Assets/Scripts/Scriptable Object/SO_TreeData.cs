@@ -36,7 +36,7 @@ namespace TreeManager
     [System.Serializable]
     public struct TreeData
     {
-        [Header("Mùa ưa thích")]
+    //    [Header("Mùa ưa thích")]
         public ESeason favoriteSeason;
         [Header("Giá trị nhận được sau khi thu hoạch")]
         public RewardData rewardData;

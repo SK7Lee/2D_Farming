@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e6aa577c2435a408e67845ccffc643, type: 3}
+  m_Name: PlayerInventory
+  m_EditorClassIdentifier: 
+  inventoryItems:
+  - quantity: 1
+    item: {fileID: 11400000, guid: fd29f3f457bc9254baf0de62dd254d3f, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 3a44c8dbbfb016e4f9855258b48387e7, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 2e81e54c4932c814688f2f1f0efc2c21, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 04bffcd204c736541865cbd14ed6368d, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 3643fc798082b3e4aa0a62033dac231e, type: 2}
+  <Size>k__BackingField: 10
