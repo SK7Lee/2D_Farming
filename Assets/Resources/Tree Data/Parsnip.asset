@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01bb8f221b04e94f9fd1a9f99e9f2d4, type: 3}
+  m_Name: Parsnip
+  m_EditorClassIdentifier: 
+  data:
+    favoriteSeason: 0
+    rewardData:
+      harvests: 0
+      expBonus: 0
+      sellPrice: 0
+    stageDatas:
+    - stageImage: {fileID: 1632081351081823852, guid: 040475a9ed4e4294cb325a3a33e29809, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: 3772789071971093410, guid: ab9a5f8ae990a494fbce3aeac75a7626, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: -665967449558871786, guid: ff57ce7e9e89b5147a2b9573274a140a, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: -7225558667172955612, guid: acb81c0a90a95a248a194ed3cf2432ec, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: -5858252376926982136, guid: ec25a056c50d9fe45aa02406c2771dbe, type: 3}
+      transitionTime: 0
+      isFinalStage: 1
+    objectReference: {fileID: 3272815052876045799, guid: f407d2b3614909c48875367bdae9f9e2, type: 3}
+    offsets:
+      plantingPositionOffset: {x: 0, y: 1}
+      plantingRotationOffset: {x: 0, y: 0}
+      plantingScaleOffset: {x: 2, y: 2}
+      havestingPositionOffset: {x: 0, y: 0.15}
+      havestingRotationOffset: {x: 0, y: 0}
+      havestingScaleOffset: {x: 0.4, y: 0.4}

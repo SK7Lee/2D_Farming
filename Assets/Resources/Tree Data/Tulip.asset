@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01bb8f221b04e94f9fd1a9f99e9f2d4, type: 3}
+  m_Name: Tulip
+  m_EditorClassIdentifier: 
+  data:
+    favoriteSeason: 0
+    rewardData:
+      harvests: 0
+      expBonus: 0
+      sellPrice: 0
+    stageDatas:
+    - stageImage: {fileID: 2163077899002787417, guid: 87d62a8fb42924243856f915cbeeae57, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: -9032485869488087638, guid: e4bccbc095a2c3f40aec383547cf884d, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: 2181812300175044664, guid: 8bbc3a1bd6bb4d340af6ebd4b4c9cdd9, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: 8268906756000924206, guid: 35a739e1941348b489af417693c6d794, type: 3}
+      transitionTime: 3
+      isFinalStage: 0
+    - stageImage: {fileID: -8857714737795681529, guid: 25acdd25615977b40bc5ff059f9c0907, type: 3}
+      transitionTime: 0
+      isFinalStage: 1
+    objectReference: {fileID: 5068630428058979531, guid: ae9956abb63a1474faa59d1863c8fd76, type: 3}
+    offsets:
+      plantingPositionOffset: {x: 0, y: 0.1}
+      plantingRotationOffset: {x: 0, y: 0}
+      plantingScaleOffset: {x: 2, y: 2}
+      havestingPositionOffset: {x: 0, y: 0.15}
+      havestingRotationOffset: {x: 0, y: 0}
+      havestingScaleOffset: {x: 0.4, y: 0.4}

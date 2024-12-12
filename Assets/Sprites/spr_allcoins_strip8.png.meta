@@ -228,6 +228,84 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1234,7 +1312,52 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_allcoins_strip8_0: 964709346358069400
+      spr_allcoins_strip8_1: 7818876154362170720
+      spr_allcoins_strip8_10: 5619351028679409519
+      spr_allcoins_strip8_11: -1156572393847908380
+      spr_allcoins_strip8_12: 6909759945762434659
+      spr_allcoins_strip8_13: 8652432719198877620
+      spr_allcoins_strip8_14: 3558517805562325842
+      spr_allcoins_strip8_15: 1131218321606005071
+      spr_allcoins_strip8_16: -551938297442631787
+      spr_allcoins_strip8_17: -2611895219009965663
+      spr_allcoins_strip8_18: -7843695150760941279
+      spr_allcoins_strip8_19: 5342543971921981068
+      spr_allcoins_strip8_2: -3425420500364126691
+      spr_allcoins_strip8_20: -5249880940925879247
+      spr_allcoins_strip8_21: -4407732105261698344
+      spr_allcoins_strip8_22: 7663532067632029690
+      spr_allcoins_strip8_23: 53310432985520812
+      spr_allcoins_strip8_24: -6126047033705499508
+      spr_allcoins_strip8_25: 5435642848895656579
+      spr_allcoins_strip8_26: -3339888499499643877
+      spr_allcoins_strip8_27: 415208845965807672
+      spr_allcoins_strip8_28: 173466360018313145
+      spr_allcoins_strip8_29: -4226072895873941967
+      spr_allcoins_strip8_3: 5171597120111062140
+      spr_allcoins_strip8_30: -904426812352488035
+      spr_allcoins_strip8_31: 3143105085566240234
+      spr_allcoins_strip8_32: -2588814689234486138
+      spr_allcoins_strip8_33: -1794486196865559470
+      spr_allcoins_strip8_34: -3938526943233687375
+      spr_allcoins_strip8_35: 3907709627768479950
+      spr_allcoins_strip8_36: 6496686354144101170
+      spr_allcoins_strip8_37: -7021314342979906929
+      spr_allcoins_strip8_38: 3152981229463390098
+      spr_allcoins_strip8_39: -1681497326127140604
+      spr_allcoins_strip8_4: 4099401573505991510
+      spr_allcoins_strip8_40: -4175976300109496233
+      spr_allcoins_strip8_41: -7265358025443555488
+      spr_allcoins_strip8_42: 5095468198245774375
+      spr_allcoins_strip8_43: -4895601539158863641
+      spr_allcoins_strip8_44: -3551074541546158436
+      spr_allcoins_strip8_5: 6035872699080408690
+      spr_allcoins_strip8_6: -833721639855251723
+      spr_allcoins_strip8_7: 4600845238720221914
+      spr_allcoins_strip8_8: 7137090416449790032
+      spr_allcoins_strip8_9: -7432300848721913907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
