@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4867621cbe9a7004e9f1cb4b69c5fcd1, type: 3}
+  m_Name: Pickaxe
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Pickaxe
+  <Description>k__BackingField: Dig stone.
+  <ItemImage>k__BackingField: {fileID: 8959118705387878318, guid: dcd2b9181ed7ebb49897ca03be0c2621, type: 3}

@@ -709,7 +709,6 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-<<<<<<< HEAD
     nameFileIdTable:
       plants free_0: 5214640707927695005
       plants free_1: -7493073933449792820
@@ -735,9 +734,6 @@ TextureImporter:
       plants free_7: 435282911145922356
       plants free_8: 190436279196790070
       plants free_9: 2876862503548076407
-=======
-    nameFileIdTable: {}
->>>>>>> 0373262ad1b8072586ccb62349397df9661b6fb1
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
