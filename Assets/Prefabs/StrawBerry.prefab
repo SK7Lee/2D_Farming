@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 2600907541764279045}
   - component: {fileID: 7443249716801526272}
   - component: {fileID: 1637127602422589840}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 7
+>>>>>>> master
   m_Name: StrawBerry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,9 +78,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+<<<<<<< HEAD
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+=======
+  m_SortingLayerID: -1352191939
+  m_SortingLayer: 3
+  m_SortingOrder: 2
+>>>>>>> master
   m_Sprite: {fileID: 6625436996197027576, guid: a90df79ebeca3f0429a61e86287b041c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

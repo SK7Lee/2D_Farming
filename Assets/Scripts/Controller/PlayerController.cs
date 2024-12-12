@@ -12,7 +12,11 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public SpriteRenderer spriteRenderer;
 
+<<<<<<< HEAD
     [Header("Movement")]
+=======
+    [Header("Movement OnGround")]
+>>>>>>> master
     [Tooltip("Idle - Walk - Run props")]
     public bool isSprint;
     public bool isFlip = false;
@@ -28,6 +32,18 @@ public class PlayerController : MonoBehaviour
     public float rollDuration = .5f;
     public float rollDistance = 5.0f;
 
+<<<<<<< HEAD
+=======
+    [Header("Movement OnWater")]
+    public bool isGround = true;
+    public LayerMask waterLayerMask;
+    public float groundCheckRadius = 1.0f;
+    public float groundCheckDistance = 1.0f;
+
+    public float swimSpeed = 3.0f;
+    public float fastSwimSpeed = 5.0f;
+
+>>>>>>> master
     [Header("Movement Variations")]
     public AnimationCurve jumpCurve;
     public AnimationCurve rollCurve;
@@ -55,6 +71,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+<<<<<<< HEAD
+=======
+        CheckGround();
+>>>>>>> master
     }
     #region InputManager
     private void InputBinding()
@@ -123,6 +143,7 @@ public class PlayerController : MonoBehaviour
     //Hàm di chuyển nhân vật
     public void Move()
     {
+<<<<<<< HEAD
         if (moveDirection.magnitude > 0)
         {
             float targetSpeed = isSprint ? runSpeed : walkSpeed;
@@ -134,6 +155,31 @@ public class PlayerController : MonoBehaviour
         {
             speed = 0.0f;
             animator.SetFloat("Speed", speed);
+=======
+        if (isGround)
+        {
+            if (moveDirection.magnitude > 0)
+            {
+                float targetSpeed = isSprint ? runSpeed : walkSpeed;
+                speed = targetSpeed;
+                animator.SetFloat(AnimationParams.Speed_Param, speed);
+                controller.Move(moveDirection * targetSpeed * Time.fixedDeltaTime);
+            }
+            else
+            {
+                speed = 0.0f;
+                animator.SetFloat(AnimationParams.Speed_Param, speed);
+            }
+        }
+        else
+        {
+            if (moveDirection.magnitude > 0)
+            {
+                float targetSpeed = isSprint ? fastSwimSpeed : swimSpeed;
+                controller.Move(moveDirection * targetSpeed * Time.fixedDeltaTime);
+            }
+
+>>>>>>> master
         }
     }
     //Hàm này lật Sprite nhân vật khi hướng di chuyển moveDirection.x thay đổi
@@ -151,13 +197,21 @@ public class PlayerController : MonoBehaviour
     //Hàm nhảy
     public void StartJump()
     {
+<<<<<<< HEAD
         if(C_Jump == null)
+=======
+        if(C_Jump == null && isGround)
+>>>>>>> master
             C_Jump = StartCoroutine(Jump());
     }
     IEnumerator Jump()
     {
         float elapsedTime = 0.0f;
+<<<<<<< HEAD
         animator.CrossFadeInFixedTime("Jump Start", .01f);
+=======
+        animator.CrossFadeInFixedTime(AnimationParams.Jump_Start_State, .01f);
+>>>>>>> master
         while (elapsedTime < jumpDuration)
         {
             elapsedTime += Time.fixedDeltaTime;
@@ -173,19 +227,31 @@ public class PlayerController : MonoBehaviour
             //}
             yield return null;
         }
+<<<<<<< HEAD
         animator.CrossFadeInFixedTime("Jump End", .01f);
+=======
+        animator.CrossFadeInFixedTime(AnimationParams.Jump_End_State, .01f);
+>>>>>>> master
         C_Jump = null;
     }
     //Hàm lăn nhân vật
     public void StartRoll()
     {
+<<<<<<< HEAD
         if(C_Roll == null && C_Jump == null)
+=======
+        if(C_Roll == null && C_Jump == null && isGround) 
+>>>>>>> master
         C_Roll = StartCoroutine(Roll());
     }
     IEnumerator Roll()
     {
         float elapsedTime = 0.0f;
+<<<<<<< HEAD
         animator.CrossFadeInFixedTime("Roll", .01f);
+=======
+        animator.CrossFadeInFixedTime(AnimationParams.Roll_State, .01f);
+>>>>>>> master
         while (elapsedTime < rollDuration)
         {
             elapsedTime += Time.fixedDeltaTime;
@@ -199,4 +265,39 @@ public class PlayerController : MonoBehaviour
         C_Roll = null;
     }
     #endregion
+<<<<<<< HEAD
+=======
+    
+    void CheckGround()
+    {
+        // Thực hiện CircleCast
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, groundCheckRadius, Vector2.down, groundCheckDistance, waterLayerMask);
+
+        if (hit.collider != null)
+        {
+            isGround = false;
+            if (animator.GetBool(AnimationParams.IsGround_Param))
+            {
+                Debug.Log("Set To False");
+                animator.SetBool(AnimationParams.IsGround_Param, isGround);
+            }
+        }
+        else
+        {
+            isGround = true;
+            if (!animator.GetBool(AnimationParams.IsGround_Param))
+            {
+                Debug.Log("Set To True");
+                animator.SetBool(AnimationParams.IsGround_Param, isGround);
+            }
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        // Vẽ Gizmos để dễ dàng kiểm tra hình tròn trong Scene
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 1.0f);
+    }
+
+>>>>>>> master
 }
