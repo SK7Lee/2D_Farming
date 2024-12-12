@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Goblin Swimming
+  m_Name: Nutty Walk
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -8247888446869020008, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
-    - time: 0.28333333
-      value: {fileID: -3632062043995045989, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
-    - time: 0.5833333
-      value: {fileID: -7759771715280938091, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
-    - time: 0.8666667
-      value: {fileID: -6683346899128637861, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
+      value: {fileID: 1247486393, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
+    - time: 0.2
+      value: {fileID: -1112799682, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
+    - time: 0.4
+      value: {fileID: -2066613847, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
+    - time: 0.6
+      value: {fileID: 1273867814, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,22 +50,22 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -8247888446869020008, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
-    - {fileID: -3632062043995045989, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
-    - {fileID: -7759771715280938091, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
-    - {fileID: -6683346899128637861, guid: ff01ead5d29c1dd4cb5f2a77e375f7cd, type: 3}
+    - {fileID: 1247486393, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
+    - {fileID: -1112799682, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
+    - {fileID: -2066613847, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
+    - {fileID: 1273867814, guid: 0e2a2f4437896e4449fe0ad2dd6b7117, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8833333
+    m_StopTime: 0.6166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
-    m_LoopBlend: 0
+    m_LoopTime: 1
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0

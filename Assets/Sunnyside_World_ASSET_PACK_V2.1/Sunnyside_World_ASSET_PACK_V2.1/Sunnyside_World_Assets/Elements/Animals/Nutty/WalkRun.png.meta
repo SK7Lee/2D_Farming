@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 7868235e0919f7b438db07f9d4ae64f6
+guid: 0e2a2f4437896e4449fe0ad2dd6b7117
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1837546222562711944
-    second: spr_deco_duck_01_strip4_0
+      213: -4363388880256389182
+    second: WalkRun_0
+  - first:
+      213: -33124084076648397
+    second: WalkRun_1
+  - first:
+      213: 4615230148032006406
+    second: WalkRun_2
+  - first:
+      213: -4801909342708655880
+    second: WalkRun_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,19 +93,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,6 +107,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,35 +187,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_0
+      name: WalkRun_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 876e9c14279bf76e0800000000000000
-      internalID: -1837546222562711944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 467fc8f22e249dc44badde6ae95b4e87
-      internalID: 1873329628
+      spriteID: fcaf1f710213c63468d534db4f5b2758
+      internalID: 1247486393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_2
+      name: WalkRun_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a903cfb26d457149a22c06b007f4378
-      internalID: 509033431
+      spriteID: 49b8d450251873c4ab374803a28124de
+      internalID: -1112799682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_3
+      name: WalkRun_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,8 +246,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045c3b5d11d71e945896c17a826aab1c
-      internalID: 850784784
+      spriteID: 5600e87aa1ef28c40afc148bafea4ca7
+      internalID: -2066613847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkRun_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b456d4c8d2e5a49b59e7d887ccae6c
+      internalID: 1273867814
       vertices: []
       indices: 
       edges: []
@@ -269,7 +278,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 05aac341648756c45a826ad1f29db9f8
+    spriteID: 1bf33b32bbe6e9546b1face7a621387d
     internalID: 0
     vertices: []
     indices: 
@@ -279,10 +288,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_deco_duck_01_strip4_0: -1837546222562711944
-      spr_deco_duck_01_strip4_1: 1873329628
-      spr_deco_duck_01_strip4_2: 509033431
-      spr_deco_duck_01_strip4_3: 850784784
+      WalkRun_0: 1247486393
+      WalkRun_1: -1112799682
+      WalkRun_2: -2066613847
+      WalkRun_3: 1273867814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

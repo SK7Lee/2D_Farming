@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: 7868235e0919f7b438db07f9d4ae64f6
+guid: 4a53034ef941ba842b622235dc875b23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1837546222562711944
-    second: spr_deco_duck_01_strip4_0
+      213: 873134733267508027
+    second: IdleWithBlink_0
+  - first:
+      213: -4969715598363977776
+    second: IdleWithBlink_1
+  - first:
+      213: -5768366905535075001
+    second: IdleWithBlink_2
+  - first:
+      213: -2630343665931044970
+    second: IdleWithBlink_3
+  - first:
+      213: 8320932301551680144
+    second: IdleWithBlink_4
+  - first:
+      213: -5893260839211981346
+    second: IdleWithBlink_5
+  - first:
+      213: 7162147635678561361
+    second: IdleWithBlink_6
+  - first:
+      213: 5018949463071782978
+    second: IdleWithBlink_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,19 +105,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,6 +119,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,35 +199,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_0
+      name: IdleWithBlink_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 876e9c14279bf76e0800000000000000
-      internalID: -1837546222562711944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 467fc8f22e249dc44badde6ae95b4e87
-      internalID: 1873329628
+      spriteID: 143e3096b663bea4db125397b50292db
+      internalID: 447350380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_2
+      name: IdleWithBlink_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a903cfb26d457149a22c06b007f4378
-      internalID: 509033431
+      spriteID: 4fd89a538330c36418c255a3ccb9c4de
+      internalID: -1464482811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_deco_duck_01_strip4_3
+      name: IdleWithBlink_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,8 +258,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045c3b5d11d71e945896c17a826aab1c
-      internalID: 850784784
+      spriteID: 3119fc36e82fece44a92fe47bf27b66c
+      internalID: -755016202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleWithBlink_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbbeff6ffdac344dbb3aedc3d8e119c
+      internalID: -372512060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleWithBlink_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85aba52178d11df4c962160784d99e93
+      internalID: -1678356501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleWithBlink_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03886ea49abe9ef4bb701ef5b555057e
+      internalID: -1961992323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleWithBlink_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f53561707765e489b18d0867efbbcc
+      internalID: 812484238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleWithBlink_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e5f916c86e82e4e86955ae17badfa4
+      internalID: 35639243
       vertices: []
       indices: 
       edges: []
@@ -269,7 +378,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 05aac341648756c45a826ad1f29db9f8
+    spriteID: b4d7584a548b91148bc902d187d5a8e5
     internalID: 0
     vertices: []
     indices: 
@@ -279,10 +388,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_deco_duck_01_strip4_0: -1837546222562711944
-      spr_deco_duck_01_strip4_1: 1873329628
-      spr_deco_duck_01_strip4_2: 509033431
-      spr_deco_duck_01_strip4_3: 850784784
+      IdleWithBlink_0: 447350380
+      IdleWithBlink_1: -1464482811
+      IdleWithBlink_2: -755016202
+      IdleWithBlink_3: -372512060
+      IdleWithBlink_4: -1678356501
+      IdleWithBlink_5: -1961992323
+      IdleWithBlink_6: 812484238
+      IdleWithBlink_7: 35639243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -20,19 +20,19 @@ MonoBehaviour:
       sellPrice: 0
     stageDatas:
     - stageImage: {fileID: -3352980956440596566, guid: cb2578c90929e734a991f01e4d8be19d, type: 3}
-      transitionTime: 1
+      transitionTime: 5
       isFinalStage: 0
     - stageImage: {fileID: -1917178954299324596, guid: 8990a1ef7e7e8ec4598c2430cfbddd6c, type: 3}
-      transitionTime: 1
+      transitionTime: 5
       isFinalStage: 0
     - stageImage: {fileID: 2020103510874574933, guid: ab26b264ecbbebf4db3a9e13af8b52f6, type: 3}
-      transitionTime: 1
+      transitionTime: 5
       isFinalStage: 0
     - stageImage: {fileID: -4669944328730324818, guid: 4dc49f57533de254381c62055f9d7cfa, type: 3}
-      transitionTime: 1
+      transitionTime: 5
       isFinalStage: 0
     - stageImage: {fileID: -5569118912576847771, guid: b8f2a5337d58eb24285f25ba38304f93, type: 3}
-      transitionTime: 1
+      transitionTime: 5
       isFinalStage: 0
     - stageImage: {fileID: -7312923662682933679, guid: 8bd7e455bb60d4a4fb271d696cb037c7, type: 3}
       transitionTime: 0
