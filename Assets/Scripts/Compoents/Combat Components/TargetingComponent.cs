@@ -59,24 +59,36 @@ namespace FarmSystem
         public void ChangeTargetOverTargetingTime()
         {
             countTimeOverTarget += Time.deltaTime;
-            if(countTimeOverTarget > overTargetingTime && !owner.isCarrying )
+            if(countTimeOverTarget > overTargetingTime && !owner.isCarrying)
             {
                 isUpdateTarget = true;
             }
         }
         public void UpdatePriorityTarget()
         {
-            bool hasTarget = ChangeTargetAI(ETargetObjectType.Soil, ESoilState.HasPlant, false);
-            if (hasTarget)
+            if (!owner.isCarrying)
             {
-                isUpdateTarget = false;
-                return;
+                bool hasTarget = ChangeTargetAI(ETargetObjectType.Soil, ESoilState.HasPlant, false);
+                if (hasTarget)
+                {
+                    isUpdateTarget = false;
+                    return;
+                }
+                hasTarget = ChangeTargetAI(ETargetObjectType.Soil, ESoilState.CanHarvest, true);
+                if ((hasTarget))
+                {
+                    isUpdateTarget = false;
+                    return;
+                }
             }
-            hasTarget = ChangeTargetAI(ETargetObjectType.Soil, ESoilState.CanHarvest, true);
-            if ((hasTarget))
+            else
             {
-                isUpdateTarget = false;
-                return;
+                bool hasTarget = ChangeTargetAI(ETargetObjectType.Storage);
+                if ((hasTarget))
+                {
+                    isUpdateTarget = false;
+                    return;
+                }
             }
         }
         //public void StartUpdateTargetAI(ETargetObjectType targetObjectType, ESoilState soilStateDeny = ESoilState.None, bool checkExist = false)
