@@ -2,11 +2,11 @@ using FarmSystem;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Behavior Data", menuName = "Farm System/Behavior/Jump Action")]
-public class Jump : Action
+public class Jump : NormalAction
 {
     public override void Execute(CharacterAI agent)
     {
-        base.Execute(agent);
+        agent.StartJump();
     }
     public override bool IsFinish(CharacterAI agent)
     {

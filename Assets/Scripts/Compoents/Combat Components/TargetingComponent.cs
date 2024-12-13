@@ -28,8 +28,14 @@ namespace FarmSystem
         public Vector2 direction = Vector2.right; // Hướng CircleCast
         public float distance = 10f; // Khoảng cách CircleCast
 
+        //Delay Update
         public float timeExecuted = 0.0f;
         public float timeDelay = 1.0f;
+
+        //Delay Update Fixed
+        public float timeExecuteFixed = 0.0f;
+        public float overTargetingTime = 4.0f;
+        public float countTimeOverTarget = 0.0f;
 
         public bool isUpdateTarget = true;
         public void Awake()
@@ -45,9 +51,18 @@ namespace FarmSystem
                 timeExecuted = Time.time;
             }
         }
-        public void ChangeTarget()
+        private void FixedUpdate()
         {
-
+            ChangeTargetOverTargetingTime();
+        }
+        //Fixed
+        public void ChangeTargetOverTargetingTime()
+        {
+            countTimeOverTarget += Time.deltaTime;
+            if(countTimeOverTarget > overTargetingTime && !owner.isCarrying )
+            {
+                isUpdateTarget = true;
+            }
         }
         public void UpdatePriorityTarget()
         {
@@ -149,6 +164,12 @@ namespace FarmSystem
             if (nearestTarget != null)
             {
                 target = nearestTarget;
+
+                if(lastTarget == null || lastTarget != target)
+                {
+                    lastTarget = target;
+                    countTimeOverTarget = 0.0f;
+                }
                 Debug.Log($"New target set: {target.name}");
                 return true;
             }

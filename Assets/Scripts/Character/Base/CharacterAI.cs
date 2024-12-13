@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -22,13 +24,16 @@ namespace FarmSystem {
 
         [Header("NavMeshAgent")]
         public NavMeshAgent agent;
+        public float checkRadius;
+        public Vector2 randomPositionResult;
+
+        [Header("Current Target Tree")]
+        public string treeTargetName;
+        //Coroutines
         protected Coroutine C_MoveToTarget;
         protected Coroutine C_Attack;
         protected Coroutine C_Roll;
         protected Coroutine C_Jump;
-
-        [Header("Current Target Tree")]
-        public string treeTargetName;
         protected override void Awake()
         {
             base.Awake();
@@ -177,7 +182,8 @@ namespace FarmSystem {
             speed = 0.0f;
             animator.SetFloat(AnimationParams.Speed_Param, 0.0f);
         }
-
+        #endregion
+        #region AgentStuffs
         bool HasReachedDestination()
         {
             // Kiểm tra nếu agent hoặc đích không hợp lệ
@@ -199,7 +205,26 @@ namespace FarmSystem {
             }
             return false;
         }
+        public Vector2 GetWalkableArea(Vector2 center, float areaSize, float step)
+        {
+            // Lấy vị trí ngẫu nhiên trong bán kính
+            Vector2 randomPoint2D = Random.insideUnitCircle * checkRadius;
+            Vector3 randomPoint3D = new Vector3(randomPoint2D.x, randomPoint2D.y, 0);
+
+            NavMeshHit hit;
+            // Kiểm tra điểm ngẫu nhiên có thuộc miền Walkable không
+            if (NavMesh.SamplePosition(randomPoint3D, out hit, checkRadius, NavMesh.AllAreas))
+            {
+                return randomPoint2D;
+            }
+            else
+            {
+                return center;
+            }
+        }
+        
+        #endregion
     }
-    #endregion
+
 }
 

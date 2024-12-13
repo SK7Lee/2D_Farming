@@ -108,7 +108,17 @@ namespace FarmSystem
             {
                 Soil soil = (owner as CharacterAI).targetingComponent.target.GetComponent<Soil>();
                 if (soil != null)
-                (owner as CharacterAI).targetingComponent.target.GetComponent<Soil>().SetState(ESoilState.InProcess);
+                {
+                    if (!soil.HasState(ESoilState.InProcess))
+                    {
+                        soil.SetState(ESoilState.InProcess);
+                    }
+                    else
+                    {
+                        (owner as CharacterAI).targetingComponent.isUpdateTarget = true;
+                        yield break;
+                    }
+                }
             }
             while (actionExecuteTimes < currentAction.data.playAnimTimes)
             {

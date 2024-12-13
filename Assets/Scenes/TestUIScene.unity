@@ -2043,6 +2043,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: Potato
 --- !u!65 &47447930
 BoxCollider:
@@ -4247,6 +4249,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: 
 --- !u!114 &134931270
 MonoBehaviour:
@@ -23228,6 +23232,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: 
 --- !u!114 &834892532
 MonoBehaviour:
@@ -26253,6 +26259,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: 
 --- !u!114 &932198482
 MonoBehaviour:
@@ -33579,6 +33587,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: Potato
 --- !u!65 &1181041334
 BoxCollider:
@@ -34973,6 +34983,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: 
 --- !u!114 &1211694581
 MonoBehaviour:
@@ -108445,7 +108457,7 @@ GameObject:
   - component: {fileID: 1575244377}
   - component: {fileID: 1575244376}
   m_Layer: 0
-  m_Name: Nutty
+  m_Name: Nutty (Pet)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108670,22 +108682,16 @@ MonoBehaviour:
   currentAction: {fileID: 0}
   normalActionDatas:
   - name: 
-    action: {fileID: 11400000, guid: e145e3573b9f3bf4ab38962a14e75255, type: 2}
+    action: {fileID: 11400000, guid: d8d8ec8ebd151eb40a77e631449ee46c, type: 2}
     condition:
-      boolValue:
-      - variableType: 3
-        compareType: 5
-        value: 1
+      boolValue: []
       intValue: []
-      floatValue:
-      - variableType: 1
-        compareType: 3
-        value: 3
+      floatValue: []
     priority: 0
   combatActionDatas: []
   farmingActionDatas: []
   timeExecuted: 0
-  timeDelay: 1.5
+  timeDelay: 0.5
 --- !u!114 &1575244375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108740,6 +108746,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 30
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: 
 --- !u!65 &1575244376
 BoxCollider:
@@ -137322,6 +137330,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: 
 --- !u!114 &2027485787
 MonoBehaviour:
@@ -146719,6 +146729,8 @@ MonoBehaviour:
   energy: 100
   behaviorDecesion: {fileID: 0}
   agent: {fileID: 0}
+  checkRadius: 0
+  randomPositionResult: {x: 0, y: 0}
   treeTargetName: Potato
 --- !u!223 &6517553252546724190
 Canvas:
